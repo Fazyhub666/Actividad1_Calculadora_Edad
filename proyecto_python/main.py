@@ -42,3 +42,6 @@ try:
         
 except ValueError:
     print("[ERROR] Deben ingresar numeros enteros.")
+
+print("=====================================================")
+input("Presione ENTER para salir...")

@@ -42,8 +42,20 @@ int main() {
     cout << "Ingrese Dia, Mes y Anio de nacimiento (separados por espacios): ";
     cin >> diaN >> mesN >> anioN;
 
+    if (!cin) {
+        cout << "[ERROR] Debe ingresar tres numeros (Dia Mes Anio)." << endl;
+        cin.clear();
+        cin.ignore(1000, '\n');
+        cout << "Presione ENTER para salir...";
+        cin.get();
+        return 1;
+    }
+
     if (!esFechaValida(diaN, mesN, anioN)) {
         cout << "[ERROR] La fecha ingresada no existe en el calendario." << endl;
+        cout << "Presione ENTER para salir...";
+        cin.ignore(1000, '\n');
+        cin.get();
         return 1;
     }
 
@@ -56,6 +68,10 @@ int main() {
     cout << "\n[SISTEMA] Fecha de hoy: " << diaA << "/" << mesA << "/" << anioA << endl;
     cout << "[SISTEMA] Edad calculada: " << edad << " anos." << endl;
     cout << "=====================================================" << endl;
+
+    cin.ignore(1000, '\n');
+    cout << "Presione ENTER para salir...";
+    cin.get();
 
     return 0;
 }
