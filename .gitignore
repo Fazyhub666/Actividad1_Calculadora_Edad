@@ -1,1 +1,30 @@
+# Archivos comprimidos y empaquetados
+*.zip
+*.rar
+*.7z
+*.tar.gz
+*.iso
 
+# Multimedia y recursos pesados
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.wav
+*.mp3
+*.psd
+*.blend
+
+# Ejecutables, compilados y bases de datos
+*.exe
+*.dll
+*.bin
+*.out
+*.sqlite
+*.db
+*.sql
+
+# Carpetas de dependencias y builds
+node_modules/
+build/
+dist/
